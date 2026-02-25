@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Note</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar" id="nav-bar">
+            <p>Notes<span>App</span></p>
+            <ul id="nav-menu">
+                <li><a class="active" href="home.html">Home</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="feature.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+             <div class="hamburger" id="hamburger">
+                ☰
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="todoSection1">
+            <h1>Capture and Organize</h1>
+            <h1>Your Notes Effortlessly</h1>
+            <p>Create , manage, and access your notes anytime, anywhere.</p>
+            <button class="startBtn" id="start-btn">Get Started</button>
+        </div>
+    </section>
+
+    <section>
+        <div class="banner2">
+            <div class="bannerWhy">
+                <div class="noteDiv">
+                    <i><img class="home-img" src="images/note2.jpeg" alt=""></i>
+                    <h3>Easy to Use</h3>
+                    <p> Add, Edit, and Manage your Notes with a user-friendly design.</p>
+                </div>
+                <div class="noteDiv">
+                    <i><img class="home-img" src="images/note-cloud.png" alt=""></i>
+                    <h3>Sync cross Devices</h3>
+                    <p>Categorize your notes to not lose your ambition.</p>
+                </div>
+                <div class="noteDiv">
+                    <i><img class="home-img" src="images/secure1.png" alt=""></i>
+                    <h3>Stay Oranized & Productive</h3>
+                    <p>Your notes are securely saved and accessible at anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="div-note">
+            <h2 class="ListParag">My Notes</h2>
+            <div class="note-disp" id="display">
+                
+            </div>
+        </div>
+    </section>    
+    <footer>
+        <p>@ 2026 NotesApp All rights reserved</p>
+    </footer>
+
+    <dialog id="confirmDeleteModal" class="confirm-dialog">
+        <h3>Delete Note</h3>
+        <p>Are you sure you want to delete this note?</p>
+
+        <div class="dialog-actions">
+            <button id="cancelDelete" class="cancel-btn">Cancel</button>
+            <button id="confirmDelete" class="delete-btn">Delete</button>
+        </div>
+    </dialog>
+
+
+    <script type="module" src="scripts/addNewNote.js"></script>
+
+    <script>
+        const startBtn = document.getElementById("start-btn");
+
+        startBtn.addEventListener("click", () => {
+            window.location.href = "notes.html";
+        });
+    </script>
+</body>
+</html>

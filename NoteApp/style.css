@@ -1,0 +1,832 @@
+:root {
+    /* ===== Brand Blues ===== */
+    --primary-blue: #1E3C72;      /* Header, cards */
+    --secondary-blue: #2A5298;    /* Buttons, active links */
+    --light-blue: #4FACFE;        /* Gradient highlight */
+    --aqua-blue: #00C6FB;         /* Hero gradient */
+
+    /* ===== Accent Colors ===== */
+    --accent-yellow: #FFD43B;     /* CTA buttons, logo accent */
+    --success-green: #2ECC71;     /* Complete / success */
+    --danger-red: #E74C3C;        /* Delete / danger */
+
+    /* ===== Neutral Colors ===== */
+    --white: #FFFFFF;
+    --light-gray: #F4F6F8;        /* Page background */
+    --border-gray: #D1D5DB;       /* Inputs, borders */
+    --dark-gray: #333333;         /* Main text */
+
+    /* ===== Gradients ===== */
+    --hero-gradient: linear-gradient(
+        to right,
+        #1E3C72,
+        #2A5298,
+        #4FACFE,
+        #00C6FB
+    );
+
+    --footer-gradient: linear-gradient(
+        to right,
+        #0F2027,
+        #203A43,
+        #2C5364
+    );
+
+    /* ===== UI Extras ===== */
+    --shadow-soft: 0 8px 20px rgba(0, 0, 0, 0.1);
+    --shadow-card: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    --radius-small: 5px;
+    --radius-medium: 10px;
+    --radius-large: 25px;
+
+    --transition-fast: 0.2s ease-in-out;
+    --transition-normal: 0.3s ease-in-out;
+}
+
+body{
+    margin: 0;
+}
+.nav-bar{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    background-color: var(--primary-blue);
+}
+.nav-bar p{
+    color:  var(--light-gray);
+    size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.nav-bar p span{
+    color: var(--accent-yellow);
+}
+.nav-bar ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 40%;
+}
+.nav-bar ul li{
+    list-style: none;
+    margin-left: 20px;
+    text-decoration: none;
+}
+.nav-bar li a{
+    text-align: justify;
+    text-decoration: none;
+    color: var(--light-gray);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+}
+.nav-bar a:hover{
+    text-decoration: underline;
+    color: var(--accent-yellow);
+}
+.nav-bar .active{
+    color: var(--accent-yellow);
+    text-decoration: underline;
+}
+
+/* Section 1............*/
+
+.todoSection1{
+    background-image: url(images/todo-list-bg-img.jpg);
+    text-align: start;
+}
+.todoSection1 h1{
+    color: var(--white);
+    margin-top: 10px;
+    margin-left: 10%;
+    text-shadow: 0 0 5px var(--aqua-blue), 0 0 5px var(--aqua-blue);
+}
+.todoSection1 p{
+    color: var(--light-gray);
+    margin-left: 10%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.startBtn{
+    color: var(--white);
+    background-color: var(--accent-yellow);
+    padding: 10px 50px;
+    margin-left: 10%;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    scale: 1;
+    transition: scale 0.5s ease;
+}
+.startBtn:hover{
+    color: var(--accent-yellow);
+    background-color: var(--aqua-blue);
+    scale: 1.05;
+    box-shadow: 0 0 5px var(--white), 0 0 5px var(--white);
+}
+
+.divList{
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.ListParag{
+    text-align: center;
+    color: var(--primary-blue);
+}
+.list{
+    padding: 10px;
+    text-align: center;
+}
+.taskInput{
+    width: 400px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+.addBtn{
+    color: var(--white);
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--secondary-blue);
+    padding: 8px 35px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    scale: 1;
+    transition: scale 0.2s ease;
+}
+.addBtn:hover{
+    background-color: var(--success-green);
+    scale: 1.05 ;
+}
+.display{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+}
+.displayList{
+    width: 500px;
+    padding: 10px 10px;
+    background-color: var(--white);
+    margin-top: 5px;
+    margin-left: 29%;
+    border: 1px solid var(--accent-yellow);
+    border-radius: 10px;
+}
+.deleteBtn{
+    margin-left: 55%;
+    padding: 8px 15px;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 14px;
+    background-color: var(--danger-red);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+.banner2{
+    background-color: var(--white);
+    text-align: center;
+}
+.bannerWhy{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.noteDiv{
+    width: 250px;
+    padding: 10px 15px;
+    margin: 10px;
+    text-align: center;
+    background-color: var(--secondary-blue);
+    border-radius: 10px;
+    color: var(--white);
+}
+.todoDiv i{
+    font-size: 30px;
+}
+.todoDiv p{
+    font-style: italic;
+    font-size: small;
+}
+footer{
+    background-color: var(--primary-blue);
+}
+footer p{
+    color: var(--white);
+    text-align: center;
+    font-family: "fantasy";
+    font-style: italic;
+}
+
+/* Home section 2  banner2  */
+
+.todoSection3{
+    background-color: var(--white);
+    text-align: center;
+}
+.todoSection3 h2{
+    color: var(--primary-blue);
+}
+.todoWhy{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 200px;
+    text-align: center;
+}
+.todoDiv{
+    width: 150px;
+    padding: 10px 15px;
+    margin: 10px;
+    text-align: center;
+    background-color: var(--secondary-blue);
+    border-radius: 10px;
+    color: var(--white);
+}
+.todoDiv i{
+    font-size: 30px;
+}
+.home-img{
+    width: 50px;
+    border-radius: 50px;
+}
+.todoDiv p{
+    font-style: italic;
+    font-size: small;
+}
+/* Banner 3*/
+.div-note{
+    background-color: var(--light-gray);
+}
+.div-note h2{
+    margin-top: 20px;
+}
+.note-disp{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.my-note{
+    width: 280px;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    background-color: var(--white);
+    border: 1px solid var(--accent-yellow);
+    border-radius: 10px;
+}
+.my-note h3{
+    color: var(--aqua-blue);
+}
+.my-note h3 .edit{
+    margin-left: 20%;
+    color: var(--primary-blue);
+    cursor: pointer;
+}
+.my-note h3 i:hover{
+    color: var(--success-green);
+}
+.my-note h3 .delete{
+    cursor: pointer;
+}
+.my-note h3 .delete{
+    margin-left: 10px;
+    color: var(--danger-red);
+}
+.my-note .note-p1{
+    color: var(--dark-gray);
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: medium;
+}
+.my-note .note-p2{
+    color: var(--border-gray);
+    font-family: cursive;
+    font-size: small;
+    text-align: end;
+}
+/* Notes Dashboard*/
+.notes-banner2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.note-dash{
+    margin-left: 10px;
+}
+.note-dash h2{
+    color: var(--primary-blue);
+}
+
+.add-Btn{
+    background-color: var(--accent-yellow);
+    padding: 10px 30px;
+    margin-top: 15px;
+    margin-right: 10px;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-radius: var(--radius-large);
+    outline: none;
+    cursor: pointer;
+    scale: 1;
+    transition: scale 0.5s ease;
+}
+.add-Btn:hover{
+    color: var(--accent-yellow);
+    background-color: var(--aqua-blue);
+    scale: 1.05;
+    box-shadow: 0 0 5px var(--white), 0 0 5px var(--white);
+}
+/* Contact Styling........*/
+.contactDiv{
+    background-color: var(--light-gray);
+}
+.contactDiv h2{
+    padding-top: 20px;
+    text-align: center;
+    color: var(--dark-gray);
+}
+.divForm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5px 40px;
+}
+.divInput{
+    width: 600px;
+    padding: 10px 15px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0 0 5px var(--primary-blue), 0 0 5px var(--primary-blue), 0 0 5px var(--primary-blue);
+}
+.divInput input{
+    width: 350px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border: 1px solid var(--accent-yellow);
+    border-radius: 10px;
+    outline: none;
+}
+.divInput .textarea{
+    width: 364px;
+    height: 140px;
+    padding-top: 10px;
+    padding-left: 15px;
+    border: 1px solid var(--accent-yellow);
+    border-radius: 10px;
+    outline: none;
+}
+.sendBtn{
+    width: 379px;
+    padding: 10px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: var(--light-blue);
+}
+.sendBtn:hover{
+    background-color: var(--aqua-blue);
+    color: var(--accent-yellow);
+}
+
+.emailBox{
+    text-align: center;
+    width: 100px;
+    height: 170px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0 0 5px var(--primary-blue), 0 0 5px var(--primary-blue), 0 0 5px var(--primary-blue);
+}
+.emailBox h3{
+    color: var(--secondary-blue);
+}
+.emailBox .email-img{
+    width: 50px;
+    border-radius: 50px;
+    background-color: var(--primary-blue);
+}
+
+/* ================================= */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f2f4f7;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.close-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Body */
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal-body input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Toolbar */
+.toolbar {
+    margin: 10px 0;
+}
+
+.toolbar button {
+    padding: 6px 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.toolbar button:hover {
+    background: #e6e6e6;
+}
+
+/* Editor */
+.editor {
+    width: 559px;
+    min-width: 50%;
+    min-height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    outline: none;
+}
+
+/* Footer */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 15px 20px;
+    border-top: 1px solid #ddd;
+}
+
+.cancel-btn {
+    background: #e0e0e0;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.add-btn {
+    background: #f5c542;
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-btn:hover {
+    background: #e0b530;
+}
+
+/* ================================= */
+
+.confirm-dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+
+.confirm-dialog::backdrop {
+    background: rgba(0,0,0,.4);
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dialog-actions .delete-btn {
+    background: var(--danger-red);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dialog-actions .cancel-btn {
+    background: #ccc;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* ================================= */
+/* RESPONSIVE STYLING */
+/* ================================= */
+
+/* Small devices: phones (up to 599px) */
+@media (max-width: 599px) {
+    .nav-bar ul {
+        margin-left: 10px;
+        flex-direction: column;
+    }
+
+    .todoSection1 {
+        padding: 30px 15px;
+    }
+
+    .todoSection1 h1 {
+        font-size: 1.8rem;
+    }
+
+    .startBtn {
+        padding: 8px 30px;
+        font-size: 18px;
+    }
+
+    .taskInput {
+        width: 70%;
+        padding: 8px;
+    }
+
+    .addBtn {
+        width: 15%;
+        padding: 10px;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .displayList {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 8px;
+    }
+
+    .deleteBtn {
+        margin-left: auto;
+        display: block;
+        margin-top: 5px;
+    }
+
+    .divForm {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .noteDiv {
+        width: 300px;
+    }
+
+    .divInput {
+        width: 95%;
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    .divInput input,
+    .divInput .textarea {
+        width: 90%;
+    }
+
+    .sendBtn {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .emailBox {
+        width: 95%;
+        margin-top: 10px;
+    }
+
+    .todoWhy {
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+
+    .todoDiv {
+        width: 80%;
+        margin: 10px auto;
+    }
+    .my-note {
+        width: 200px;
+        margin-right: 10px;
+    }
+    
+}
+
+/* Medium devices: tablets (600px to 899px) */
+@media (min-width: 600px) and (max-width: 899px) {
+    .nav-bar ul {
+        margin-left: 20px;
+    }
+
+    .todoSection1 {
+        padding: 40px 20px;
+    }
+
+    .todoSection1 h1 {
+        font-size: 2.2rem;
+    }
+
+    .startBtn {
+        padding: 9px 40px;
+        font-size: 19px;
+    }
+
+    .taskInput {
+        width: 70%;
+    }
+
+    .addBtn {
+        width: 15%;
+        font-size: 15px;
+    }
+
+    .displayList {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .divInput{
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    .divInput input,
+    .divInput .textarea {
+        width: 95%;
+        margin-right: 10px;
+    }
+
+    .sendBtn {
+        width: 90%;
+    }
+
+    .emailBox {
+        width: 40%;
+        height: 200px;
+    }
+
+    .todoDiv {
+        width: 40%;
+        margin: 10px;
+    }
+    .my-note{
+        margin-right: 10px;
+    }
+}
+
+/* Large devices: desktop (900px and up) */
+@media (min-width: 900px) {
+    /* Keep your original styles, but adjust padding for larger screens */
+    .todoSection1 {
+        padding: 60px 50px;
+    }
+
+    .taskInput {
+        width: 400px;
+    }
+    .my-note{
+        margin-right: 10px;
+    }
+
+    .displayList {
+        width: 500px;
+        margin-left: 29%;
+    }
+
+    .divInput input,
+    .divInput .textarea {
+        width: 350px;
+    }
+
+    .sendBtn {
+        width: 379px;
+    }
+
+    .emailBox {
+        width: 300px;
+    }
+}
+
+/* ============================= */
+/* HAMBURGER MENU */
+/* ============================= */
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: var(--white);
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Mobile & Tablet */
+
+@media (max-width: 899px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-bar {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-bar ul {
+        position: absolute;
+        top: 42px;
+        left: 77%;
+        width: 20%;
+        background-color: var(--primary-blue);
+        flex-direction: column;
+        display: none;
+        border-bottom-left-radius: 5px;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .nav-bar ul.show {
+        display: flex;
+    }
+
+    .nav-bar ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
